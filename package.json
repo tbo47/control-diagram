@@ -1,0 +1,36 @@
+{
+    "name": "control-diagram",
+    "version": "1.0.0",
+    "type": "module",
+    "author": "tbo47",
+    "description": "A control diagram (aka P&ID editor)",
+    "keywords": [
+        "P&ID",
+        "control diagram",
+        "circuit diagram",
+        "tbo47"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tbo47/control-diagram.git"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build --base /control-diagram/ && rm -rf ../tbo47.github.io/control-diagram && cp -r dist ../tbo47.github.io/control-diagram",
+        "prepublish2": "rm cac-editor* ; tsc -p tsconfig.prepublish.json",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "konva-es": "^9.3.20"
+    },
+    "devDependencies": {
+        "typescript": "~5.8.3",
+        "vite": "^6.3.4"
+    },
+    "files": [
+        "./cac-editor.js",
+        "./cac-editor.d.ts"
+    ],
+    "types": "./cac-editor.d.ts",
+    "license": "MIT"
+}
